@@ -1,3 +1,18 @@
+# vanteo
+
+Vanteo, A cryptocurrency portfolio allows you to keep track of the value of all of your crypto holdings in one place. Simply add which coins you hold and the amount you’re holding, and you can follow the performance of your coins in real time.  
+
+This allows the user to:
+<ul>
+<li>Track all of your cryptocurrency investments in one place</li>
+<li>Compare your crypto investments to see which coins are performing the best</li>
+<li>Easily add coins or edit balances to reflect the state of your crypto holdings</li>
+<li>Real-time data provided Using the API</li>
+</ul>
+
+<h3>View Synopsis:</h3> <a href="https://drive.google.com/file/d/1JOtqQ011a3JBb7TJEs5o1vLhTVvSIKrA/view?usp=sharing" target="_blank">Click Here</a>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
