@@ -53,7 +53,7 @@ function App() {
             volume={coin.total_volume}/>
           )
         })}
-        {loading ? "Loading" : <ReactBootstrap.Spinner animation="border"/>}
+        {loading ? ". . . . ." : <ReactBootstrap.Spinner animation="border"/>}
       </div>
     </>
   );
