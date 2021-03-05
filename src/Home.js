@@ -4,7 +4,7 @@ import axios from 'axios';
 import Coin from './components/Coin';
 import * as ReactBootstrap from 'react-bootstrap';
 
-function App() {
+function Home() {
   const [coins, setCoins] = useState([])
   const [search, setSearch] = useState('')
   const [loading, setLoading] = useState(false);
@@ -59,4 +59,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

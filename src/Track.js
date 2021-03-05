@@ -4,6 +4,7 @@ const Track = () => {
     return (
         <div>
             <h1>Tracking</h1>
+            <h2>Something</h2>
         </div>
     )
 }
