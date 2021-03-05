@@ -1,10 +1,15 @@
 import React from 'react'
+import '../App.css'
+import AddCoin from './AddCoin'
+import Header from './Header'
+import CoinList from './CoinList';
 
 const CoinSummaryPage = () => {
     return (
         <div>
-            <h1>Coin Summary</h1>
-            <h1>Coin Summary</h1>
+            <Header/>
+            <AddCoin/>
+            <CoinList/>
         </div>
     )
 }

@@ -9,7 +9,11 @@
   color: #fff;
   text-align: center;
 }
+ul{
+  list-style: none;
+}
 
+/* Home page CSS */
 .coin-app{
   display: flex;
   flex-direction: column;
@@ -66,4 +70,33 @@
 
 .main-nav ul li a:hover{
   color: #e2e2e2;
+}
+
+/* Coin Summary Page CSS */
+
+.coinlist-image{
+  width: 50px;
+}
+
+.coinlist-item{
+  display: flex;
+}
+
+.coinsummary{
+  border-color: white impo !important;
+  border-style: outset im !important;
+}
+
+.coin-data-category{
+  font-size: 10px;
+}
+
+.delete-icon{
+  display: none;
+  position: absolute;
+  right: 6px;
+}
+
+.coin:hover .delete-icon{
+  display: block;
 }
