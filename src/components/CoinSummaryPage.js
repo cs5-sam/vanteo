@@ -8,7 +8,6 @@ const CoinSummaryPage = () => {
     return (
         <div>
             <Header/>
-            <AddCoin/>
             <CoinList/>
         </div>
     )
