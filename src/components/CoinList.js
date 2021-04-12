@@ -20,8 +20,13 @@ const CoinList = () => {
             setCoins(response.data)
             setIsLoading(false)
         }
+        if (watchList.length > 0){
         fetchData()
-    }, [])
+        }
+        else{
+            setCoins([])
+        }
+    }, [watchList])
     const renderCoins = () => {
         if(isLoading){
             return <div>Loading ... </div>

@@ -4,7 +4,7 @@ import '../App.css'
 
 const CoinRender = ({coin, deleteCoin}) => {
     return (
-        <Link to="/coindetail" className="text-decoration-none coin-render">
+        <Link to={`/coins/${coin.id}`} className="text-decoration-none coin-render">
             <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
                 <img className="coinlist-image" style={{background:'white'}} src={coin.image} alt=""/>
                 <span className="text-decoration-none" style={{color:'black', background:'white'}}>{coin.current_price.toLocaleString()}</span>
