@@ -9,6 +9,12 @@
   color: #fff;
   text-align: center;
 }
+
+::selection{
+  color: white;
+  background-color: #308D46;
+}
+
 ul{
   list-style: none;
 }
@@ -83,8 +89,8 @@ ul{
 }
 
 .coinsummary{
-  border-color: white impo !important;
-  border-style: outset im !important;
+  border-color: white !important;
+  border-style: outset !important;
 }
 
 .coin-data-category{
@@ -96,7 +102,6 @@ ul{
   position: absolute;
   right: 6px;
 }
-
-.coin:hover .delete-icon{
+.coin-render:hover .delete-icon{
   display: block;
 }

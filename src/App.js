@@ -19,10 +19,12 @@ function App() {
                             </li>
                         </ul>
                     </nav>
+                    <div className="container">
                     <Switch>
                         <Route path="/" exact component={Home}></Route>
                         <Route path="/track" exact component={CoinSummaryPage}></Route>
                     </Switch>
+                    </div>
             </Router>
         </WatchListContextProvider>
     </>

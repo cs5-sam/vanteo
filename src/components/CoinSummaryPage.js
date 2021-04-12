@@ -8,7 +8,9 @@ const CoinSummaryPage = () => {
     return (
         <div>
             <Header/>
-            <CoinList/>
+            <div className="coinsummary shadow border p-2 rounded mt-2 bg-light">
+                <CoinList/>
+            </div>
         </div>
     )
 }
