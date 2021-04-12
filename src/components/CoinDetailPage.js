@@ -1,20 +1,34 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
 import HistoryChart from '../components/HistoryChart'
 import CoinData from '../components/CoinData'
 import coinGecko from '../apis/coinGecko'
 
 const CoinDetailPage = () => {
-    const {coin} = useParams()
+    const {id} = useParams()
+    const [coinData, setCoinData] = useState([])
     useEffect(() => {
         const fetchData = async() => {
-            const results = await coinGecko.get(`/coins/${coin}/market_chart/`,{
+            const resultsDay = await coinGecko.get(`/coins/${id}/market_chart/`,{
                 params:{
                     vs_currency: "usd",
                     days:"1",
                 },
             });
-            console.log(results.data)
+            const resultsWeek = await coinGecko.get(`/coins/${id}/market_chart/`,{
+                params:{
+                    vs_currency: "usd",
+                    days:"7",
+                },
+            });
+            const resultsYear = await coinGecko.get(`/coins/${id}/market_chart/`,{
+                params:{
+                    vs_currency: "usd",
+                    days:"365",
+                },
+            });
+            console.log(resultsDay.data)
+            setCoinData({day:resultsDay.data.prices, week:resultsWeek.data.prices, year: resultsYear.data.prices})
         };
         fetchData()
     }, []);
