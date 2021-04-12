@@ -9,26 +9,30 @@ const CoinDetailPage = () => {
     const [coinData, setCoinData] = useState([])
     useEffect(() => {
         const fetchData = async() => {
-            const resultsDay = await coinGecko.get(`/coins/${id}/market_chart/`,{
+
+            // simultaneoulsy calling all the end points of API
+            const {day, week, year} = await Promise.all([coinGecko.get(`/coins/${id}/market_chart/`,{
                 params:{
                     vs_currency: "usd",
                     days:"1",
                 },
-            });
-            const resultsWeek = await coinGecko.get(`/coins/${id}/market_chart/`,{
+            }),
+            coinGecko.get(`/coins/${id}/market_chart/`,{
                 params:{
                     vs_currency: "usd",
                     days:"7",
                 },
-            });
-            const resultsYear = await coinGecko.get(`/coins/${id}/market_chart/`,{
+            }),
+            coinGecko.get(`/coins/${id}/market_chart/`,{
                 params:{
                     vs_currency: "usd",
                     days:"365",
                 },
-            });
-            console.log(resultsDay.data)
-            setCoinData({day:resultsDay.data.prices, week:resultsWeek.data.prices, year: resultsYear.data.prices})
+            })
+        ])
+            
+            console.log(day)
+            setCoinData({day: day, week: week, year:year})
         };
         fetchData()
     }, []);
