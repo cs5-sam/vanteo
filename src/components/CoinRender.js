@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
 
-const CoinRender = ({coin}) => {
+const CoinRender = ({coin, deleteCoin}) => {
     return (
         <Link to="/coindetail" className="text-decoration-none coin-render">
             <li className="coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-items-center text-dark">
@@ -15,7 +15,10 @@ const CoinRender = ({coin}) => {
                 </span>
                 {/* <i className="delete-icon fas fa-times-circle text-danger"></i>#f057 */}
                 {/* <i className="fa">&#xf057;</i> */}
-                <button style={{backgroundColor:'white', color:'red', border:'none'}} className="delete-icon">X</button>
+                <button onClick={(e) => {
+                    e.preventDefault()
+                    deleteCoin(coin.id)
+                }} style={{backgroundColor:'white', color:'red', border:'none'}} className="delete-icon">X</button>
             </li>
         </Link>
     )

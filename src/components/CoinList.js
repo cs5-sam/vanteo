@@ -5,7 +5,7 @@ import CoinRender from './CoinRender'
 
 const CoinList = () => {
     const [coins, setCoins] = useState([])
-    const {watchList} = useContext(WatchListContext)
+    const {watchList, deleteCoin} = useContext(WatchListContext)
     const [isLoading, setIsLoading] = useState(false)
     console.log(watchList)
     useEffect(() => {
@@ -29,7 +29,7 @@ const CoinList = () => {
         return (
             <ul className="coinlist list-group mt-2">
                 {coins.map(coin => {
-                    return <CoinRender key={coin.id} coin={coin}/>
+                    return <CoinRender key={coin.id} coin={coin} deleteCoin={deleteCoin}/>
                 })}
             </ul>
         )
